@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FeelBeats – Mood Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Star Background -->
+  <canvas id="stars"></canvas>
+
+  <div class="container">
+    <h1 class="title">🎧 <strong>FeelBeats</strong> – Let Your Mood Pick the Music</h1>
+
+    <div class="controls" id="controls">
+      <label for="genre">Genre:</label>
+      <select id="genre" onchange="filterGenre()"></select>
+    </div>
+
+
+
+<!-- Voice Command Button -->
+<button id="voiceBtn" title="Speak a command" class="mic-button">
+  🎤 Speak
+</button>
+
+
+
+    <div class="mood-panel">
+      <div class="mood" onclick="selectMood('happy')">
+        <img class="emoji" src="https://em-content.zobj.net/thumbs/120/whatsapp/326/smiling-face-with-smiling-eyes_1f60a.png" alt="Happy" />
+        <p>Happy</p>
+      </div>
+      <div class="mood" onclick="selectMood('sad')">
+        <img class="emoji" src="https://em-content.zobj.net/thumbs/120/whatsapp/326/crying-face_1f622.png" alt="Sad" />
+        <p>Sad</p>
+      </div>
+      <div class="mood" onclick="selectMood('relaxed')">
+        <img class="emoji" src="https://em-content.zobj.net/thumbs/120/whatsapp/326/smiling-face-with-sunglasses_1f60e.png" alt="Relaxed" />
+        <p>Relaxed</p>
+      </div>
+      <div class="mood" onclick="selectMood('angry')">
+        <img class="emoji" src="https://em-content.zobj.net/thumbs/120/whatsapp/326/pouting-face_1f621.png" alt="Angry" />
+        <p>Angry</p>
+      </div>
+    </div>
+
+    <h2 class="playlist-label" id="playlistLabel">Select a mood to get music recommendations 🎶</h2>
+
+    <div class="song-box" id="songList">
+      <p>Select a mood to get music recommendations 🎶</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
